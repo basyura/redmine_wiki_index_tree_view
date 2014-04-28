@@ -1,6 +1,10 @@
 # Redmine wiki index tree view
 
-This is a plugin for Redmine which convert wiki index page to tree view
+This is a plugin for Redmine which convert wiki index page to tree view.
+This plugin contain Jörn Zaefferer's jquery-treeview.
+
+- http://bassistance.de/jquery-plugins/jquery-plugin-treeview/
+- https://github.com/jzaefferer/jquery-treeview
 
 ## Wiki original view.
 
@@ -35,10 +39,4 @@ You must modify souce to open second hierarchy.
 ## LICENSE
 
 MIT License
-
-This plugin contain Jörn Zaefferer's jquery-treeview.
-
-- http://bassistance.de/jquery-plugins/jquery-plugin-treeview/
-- https://github.com/jzaefferer/jquery-treeview
-
 
