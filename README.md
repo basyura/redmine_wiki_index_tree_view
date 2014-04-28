@@ -1,4 +1,4 @@
-# redmine wiki index tree view
+# Redmine wiki index tree view
 
 This is a plugin for Redmine which convert wiki index page to tree view
 
@@ -8,7 +8,7 @@ This is a plugin for Redmine which convert wiki index page to tree view
 
 ## Wiki tree view - open first hierarchy.
 
-this is default.
+This plugin's default view.
 
 ![first_open](http://f.st-hatena.com/images/fotolife/b/basyura/20140428/20140428235403.png)
 
