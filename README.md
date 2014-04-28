@@ -14,7 +14,9 @@ this is default.
 
 You must modify souce to open second hierarchy.
 
-```diff:redmine_wiki_index_tree_view/assets/javascripts/redmine_wiki_index_tree_view.js
+- redmine_wiki_index_tree_view/assets/javascripts/redmine_wiki_index_tree_view.js
+
+```diff
    $(document).ready(function(){
      $(".pages-hierarchy:first").treeview({
        collapsed: true,
