@@ -2,13 +2,17 @@
 
 This is a plugin for Redmine which convert wiki index page to tree view
 
-## Open first hierarchy.
+## Wiki original view.
+
+![original](http://f.st-hatena.com/images/fotolife/b/basyura/20140429/20140429000727.png) 
+
+## Wiki tree view - open first hierarchy.
 
 this is default.
 
 ![first_open](http://f.st-hatena.com/images/fotolife/b/basyura/20140428/20140428235403.png)
 
-## Open second hierarchy.
+## Wiki tree view - open second hierarchy.
 
 ![second_open](http://f.st-hatena.com/images/fotolife/b/basyura/20140428/20140428235402.png)
 
