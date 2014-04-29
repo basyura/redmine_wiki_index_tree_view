@@ -37,6 +37,12 @@ You must modify souce to open second hierarchy.
    });
 ```
 
+## Wiki tree view - keyword filter
+
+![filter](http://f.st-hatena.com/images/fotolife/b/basyura/20140429/20140429220347.png)
+
+You can filter page by keyword
+
 ## LICENSE
 
 MIT License
