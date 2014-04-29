@@ -1,7 +1,12 @@
 
 $(document).ready(function(){
+  
+  function root() {
+    return $(".pages-hierarchy:first");
+  }
+
   // changed to treeview
-	$(".pages-hierarchy:first").treeview({
+	root().treeview({
 		collapsed: true,
 	});
   // expand first node
@@ -9,32 +14,29 @@ $(document).ready(function(){
   // open second hierarchy
   $('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
   // add keyword textbox
-  var filter_keyword = $('<input type="text" value="" id="filter_keyword">');
-  $('h2').after(filter_keyword);
-
+  var keyword = $('<input type="text">');
+  $('h2').after(keyword);
   // expand tree
-  $('#filter_keyword').focus(function() {
-    $('.pages-hierarchy:first').find(".expandable-hitarea").each(function() {
-        $(this).click();
-    });
+  keyword.focus(function() {
+    root().find(".expandable-hitarea").each(function() { $(this).click(); });
   });
   // filter by keyword
-  $('#filter_keyword').keyup(function() {
-    var text = filter_keyword.val();
+  keyword.keyup(function() {
+    var text = keyword.val();
     if (text == '') {
-      $('.pages-hierarchy:first').find("li").each(function() { $(this).css('display', ''); });
+      root().find("li").each(function() { $(this).css('display', ''); });
       return;
     }
     // filter regexp
     var regex = new RegExp(text, 'i');
-
-    $('.pages-hierarchy:first').find("a").each(function() {
+    // filter
+    root().find("a").each(function() {
         var title = $(this).text();
         if (title.match(regex)) {
-          var pare = $(this).parent('li')
-          while (pare.size() != 0) {
-            pare.css('display', '');
-            pare = pare.parent().parent('li');
+          var parent = $(this).parent('li')
+          while (parent.size() != 0) {
+            parent.css('display', '');
+            parent = parent.parent().parent('li');
           }
         }
         else {
