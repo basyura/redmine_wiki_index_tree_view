@@ -1,3 +1,5 @@
 <h3>default open hierarchy</h3>
-<%= radio_button_tag('settings[default_open_hierarchy]', 1, @settings['default_open_hierarchy'].to_i == 1) %> 1
-<%= radio_button_tag('settings[default_open_hierarchy]', 2, @settings['default_open_hierarchy'].to_i == 2) %> 2
+<%= radio_button_tag('settings[default_open_hierarchy]',  0, @settings['default_open_hierarchy'].to_i == 0) %> 0
+<%= radio_button_tag('settings[default_open_hierarchy]',  1, @settings['default_open_hierarchy'].to_i == 1) %> 1
+<%= radio_button_tag('settings[default_open_hierarchy]',  2, @settings['default_open_hierarchy'].to_i == 2) %> 2
+<%= radio_button_tag('settings[default_open_hierarchy]', -1, @settings['default_open_hierarchy'].to_i == -1) %> all

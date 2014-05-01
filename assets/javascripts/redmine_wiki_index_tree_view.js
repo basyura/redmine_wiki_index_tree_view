@@ -4,17 +4,23 @@ $(document).ready(function(){
   function root() {
     return $(".pages-hierarchy:first");
   }
-
-  // changed to treeview
-	root().treeview({
-		collapsed: true,
-	});
-  // expand first node
-  $(".hitarea:first").click();
-  // open second hierarchy
-  if (get_redmine_wiki_index_tree_view_default_open_hierarchy() == 2) {
-    $('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
+  function to_treeview(div) {
+    var param = {};
+    if (div >= 0) {
+      param.collapsed = true;
+    }
+    // changed to treeview
+    root().treeview(param);
+    // expand first node
+    if (div >= 1) {
+      $(".hitarea:first").click();
+    }
+    if (div == 2) {
+      $('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
+    }
   }
+  // to treeview and open hierarchy
+  to_treeview(get_redmine_wiki_index_tree_view_default_open_hierarchy());
   // add keyword textbox
   var keyword = $('<input type="text">');
   $('h2').after(keyword);
