@@ -21,27 +21,17 @@ This plugin's default view.
 
 ![second_open](http://f.st-hatena.com/images/fotolife/b/basyura/20140428/20140428235402.png)
 
-You must modify souce to open second hierarchy.
-
-- redmine_wiki_index_tree_view/assets/javascripts/redmine_wiki_index_tree_view.js
-
-```diff
-   $(document).ready(function(){
-     $(".pages-hierarchy:first").treeview({
-       collapsed: true,
-     });
-     $(".hitarea:first").click();
-     // open second hierarchy
--    //$('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
-+    $('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
-   });
-```
-
 ## Wiki tree view - keyword filter
 
 ![filter](http://f.st-hatena.com/images/fotolife/b/basyura/20140429/20140429220347.png)
 
 You can filter page by keyword
+
+## Settings
+
+![setting](http://f.st-hatena.com/images/fotolife/b/basyura/20140501/20140501223315.png) 
+
+You can change default open hierarchy by plugin settings.
 
 ## LICENSE
 
