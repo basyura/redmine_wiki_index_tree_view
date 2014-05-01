@@ -12,7 +12,9 @@ $(document).ready(function(){
   // expand first node
   $(".hitarea:first").click();
   // open second hierarchy
-  $('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
+  if (get_redmine_wiki_index_tree_view_default_open_hierarchy() == 2) {
+    $('.treeview:first').find('ul:first').children('li').find('.hitarea:first').click();
+  }
   // add keyword textbox
   var keyword = $('<input type="text">');
   $('h2').after(keyword);
