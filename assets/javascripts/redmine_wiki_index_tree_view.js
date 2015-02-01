@@ -22,11 +22,23 @@ $(document).ready(function(){
   // to treeview and open hierarchy
   to_treeview(get_redmine_wiki_index_tree_view_default_open_hierarchy());
   // add keyword textbox
-  // message
-  var message = $('<span color="gray">&nbsp;&nbsp;(enter to search)</span>');
+  var message = $('<span style="color:gray">&nbsp;&nbsp;(enter to search)</span>');
   $('h2').after(message);
-  var keyword = $('<input type="text" width="150">');
-  $('h2').after(keyword);
+  var keyword = $('<input type="text" size="60">');
+  var form = $('<form></form>');
+  form.append(keyword);
+  $('h2').after(form);
+  // search
+  form.submit(function(){
+    var text = keyword.val();
+    if (text == '') {
+      return;
+    }
+    $('#q').val(text);
+    $('#quick-search').children('form').submit();
+    return false;
+  });
+  // focus after inserted
   keyword.focus();
   // expand tree
   keyword.focus(function() {
@@ -38,12 +50,6 @@ $(document).ready(function(){
     if (text == '') {
       root().find("li").each(function() { $(this).css('display', ''); });
       return;
-    }
-    // search
-    if (e.keyCode == 13)
-    {
-      $('#q').val(text);
-      $('#quick-search').children('form').submit();
     }
     // filter regexp
     var regex = new RegExp(text, 'i');
