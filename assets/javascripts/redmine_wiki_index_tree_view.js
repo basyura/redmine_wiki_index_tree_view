@@ -24,7 +24,7 @@ $(document).ready(function(){
   // add keyword textbox
   var message = $('<span style="color:gray">&nbsp;&nbsp;(enter to search)</span>');
   $('h2').after(message);
-  var keyword = $('<input type="text" size="60">');
+  var keyword = $('<input type="text" size="30">');
   var form = $('<form></form>');
   form.append(keyword);
   $('h2').after(form);
@@ -50,6 +50,11 @@ $(document).ready(function(){
     if (text == '') {
       root().find("li").each(function() { $(this).css('display', ''); });
       return;
+    }
+    if (keyword.expanded != '1')
+    {
+      root().find(".expandable-hitarea").each(function() { $(this).click(); });
+      keyword.expanded = '1'
     }
     // filter regexp
     var regex = new RegExp(text, 'i');
